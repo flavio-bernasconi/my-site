@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Spectral:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import "scss/mixin";
 
 $black: #131313;
 
@@ -48,7 +49,7 @@ body {
   }
   .project-name {
     font-size: 8rem;
-    color: $black;
+    color: transparent;
     letter-spacing: 5px;
     -webkit-text-stroke: 1px #e6e6e6;
     margin: 0;
@@ -56,13 +57,23 @@ body {
     &::first-letter {
       text-transform: capitalize;
     }
+    @include rwd(900) {
+      font-size: 5rem;
+    }
+    @include rwd(600) {
+      font-size: 3rem;
+      color: white;
+      -webkit-text-stroke: 0;
+    }
+    @include sm {
+      font-size: 1.4rem;
+    }
   }
-
   .project-description {
     color: #e6e6e6;
     font-size: 19px;
     margin: 0;
-    opacity: 0;
+    opacity: 1;
   }
   &:hover {
     .project-image,
