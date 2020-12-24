@@ -1,10 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export function CardProject({ project }) {
-  console.log(project.project_images[0]);
   const images = Object.values(project.project_images[0]).map((img) => img.url);
-  console.log(images);
+  console.log(project.image.url);
   return (
     <div className="project">
       <a
@@ -13,8 +11,11 @@ export function CardProject({ project }) {
         target="_blank"
         rel="noreferrer"
       >
-        <h1 className="project-name">{project?.name[0]?.text}</h1>
-        <p className="project-description">{project?.description[0]?.text}</p>
+        <img className="project-image" src={project.image.url} alt="project" />
+        <div className="project-content">
+          <h1 className="project-name">{project?.name[0]?.text}</h1>
+          <p className="project-description">{project?.description[0]?.text}</p>
+        </div>
       </a>
     </div>
   );
