@@ -10,7 +10,7 @@ body {
 }
 
 .intro {
-  height: 70vh;
+  height: 60vh;
   background-color: #e6e6e6;
   display: flex;
   justify-content: center;
@@ -45,12 +45,27 @@ img {
 
 .project {
   position: relative;
-  width: calc(30% - 40px);
+  width: calc(33% - 30px);
   box-shadow: 3px 4px 30px black;
   border-radius: 14px;
   height: auto;
   &:nth-child(2) {
     margin: 0 40px;
+  }
+  @include rwd(970) {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    &:nth-child(2) {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+  }
+  @include rwd(650) {
+    width: calc(80%);
+    margin: 40px auto;
+    &:nth-child(2) {
+      margin: 40px auto;
+    }
   }
   .link {
     display: block;
