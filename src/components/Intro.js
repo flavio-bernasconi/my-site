@@ -15,9 +15,11 @@ export function Intro(props) {
           I'm <b>Flavio Bernasconi</b> a <b>frontend developer</b> based in
           Como, Italy.
           <br />
-          Currently working at
+          You can check all my code on my
           {intro?.linkwork?.url && (
-            <a href={intro?.linkwork?.url}>{intro?.name[0].text}</a>
+            <a target="_blanck" href={intro?.linkwork?.url}>
+              {intro?.name[0].text}.
+            </a>
           )}
         </h3>
       </div>

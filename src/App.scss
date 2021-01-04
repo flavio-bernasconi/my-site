@@ -37,10 +37,18 @@ img {
 .wrapper {
   max-width: 1100px;
   margin: auto;
-  padding: 200px 30px;
+  padding: 100px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.project-title {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: black;
+  margin-top: 0;
 }
 
 .project {
@@ -49,9 +57,9 @@ img {
   box-shadow: 3px 4px 30px black;
   border-radius: 14px;
   height: auto;
-  &:nth-child(2) {
-    margin: 0 40px;
-  }
+  // &:nth-child(2) {
+  //   margin: 0 40px;
+  // }
   @include rwd(970) {
     width: calc(50% - 20px);
     margin-bottom: 40px;
@@ -121,4 +129,8 @@ img {
     border-top-right-radius: 14px;
     box-shadow: inset 3px 4px 30px red;
   }
+}
+
+.w-100 {
+  width: 100%;
 }

@@ -34,6 +34,9 @@ function App() {
       <>
         <Intro />
         <div className="wrapper">
+          <div className="w-100">
+            <p className="project-title">Projects</p>
+          </div>
           {projects.map((project) => (
             <CardProject key={project.id} project={project.data} />
           ))}
