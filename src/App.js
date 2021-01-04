@@ -35,7 +35,13 @@ function App() {
         <Intro />
         <div className="wrapper">
           <div className="w-100">
-            <p className="project-title">Projects</p>
+            <p className="intro-projects">
+              This are my favorite personal projects. I created them to train my
+              skills while trying some new cool libraries. This projects are not
+              perfect of course, but they helped me a lot to improve my code
+              skills and expand my knowledge. I hope you like them as much as I
+              do.
+            </p>
           </div>
           {projects.map((project) => (
             <CardProject key={project.id} project={project.data} />
